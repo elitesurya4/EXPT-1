@@ -1,0 +1,568 @@
+@font-face {
+  font-family: 'digital-7';
+  font-style: normal;
+  font-weight: normal;
+  src: url('digital-7.woff') format('woff');
+  }
+
+*{
+  border: 0em;
+  margin: 0em;
+  padding: 0em;
+  outline: 0em;
+}
+html{
+  scroll-behavior: smooth;
+}
+html, body{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  overflow-x: hidden !important;
+}
+::-webkit-scrollbar{
+  width: 0;
+}
+#diagram{
+  margin: 1.30vw 0;
+  border-width: 0.130px;
+  border-style: solid;
+  border-color: lightgrey;
+  height: 41.83vw;
+}
+#diagram{
+  position: relative;
+}
+#toolbox{
+  display: flex;
+  padding: 0.66vw;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  margin: 1.30vw 0;
+  border-width: 0.130vw;
+  border: 0.33vw solid;
+  border-color: lightgrey;
+  height: 70vw;
+  width: 50vw;
+  margin-left: 1vw;
+}
+#nav-logo{
+  margin-left: 2.60vw;
+  width: 4.55vw;
+  height: 4.55vw;
+}
+#nav-text{
+  font-size: 1.95vw;
+  text-decoration: none;
+  float: left;
+}
+#plot{
+  margin-top: 3.90vw;
+}
+#sim-cont{
+  border: 0.20vw solid;
+  border-color: lightgrey;
+  width: 45vw;
+  margin-left: 1.7vw;
+}
+#fb-sim-ckt{
+  height: 29.29vw;
+  width: 35.80vw;
+  margin-top: 13.02vw;
+  margin-left: 5vw;
+  position: relative;
+}
+#sim-control-header,#plot-header{
+  border:0.130vw solid;
+  border-color: lightgrey;
+  height: 3.25vw;
+  background: whitesmoke;
+}
+#sim-header{
+  border:0.130vw solid;
+  border-color: lightgrey;
+  height: 5.58vw;
+  background: whitesmoke;
+}
+#sim-head-text,#sim-control-head-text,#plot-head-text,#table-head-text,#table-1-head-text,#plotting-head-text,#plotting-head-text-1{
+  text-align: center;
+}
+#sim-control{
+  border: 0.20vw solid;
+  border-color: lightgrey;
+  width: 45vw;
+  height: 18.60vw;
+  margin-top: 1.30vw;
+  margin-left: 1.7vw;
+
+}
+#switch-btn,#simulate-btn{
+  margin-top: 1.62vw;
+  margin-right: 0.66vw;
+}
+#simulate-btn-1{
+  margin-top: 1.62vw;
+  margin-right: 0.66vw;
+  display: none;
+  margin-top: -2.5vw !important;
+  margin-left: 30vw;
+}
+#control-buttons{
+  text-align: center;
+}
+#control-buttons-1{
+  text-align: center;
+  display: none;
+}
+.source-slider,.load-slider,.temp-slider{
+  width: 70%;
+  margin-top: -2vw;
+  margin-left: 12vw;
+}
+#dc-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1.63vw;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border:0.066vw solid black;
+  border-radius:1.30vw;
+}
+
+#dc-slider:hover {
+  opacity: 1;
+}
+
+#dc-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.62vw;
+  height: 1.62vw;
+  background: #04AA6D;
+  cursor: pointer;
+  border:0.066vw solid black;
+  border-radius:20px;
+}
+
+#dc-slider::-moz-range-thumb {
+  width: 1.62vw;
+  height: 1.62vw;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+#rl-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1.62vw;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border:0.066vw solid black;
+  border-radius:1.30vw;
+}
+
+#rl-slider:hover {
+  opacity: 1;
+}
+
+#rl-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.62vw;
+  height: 1.62vw;
+  background: #04AA6D;
+  cursor: pointer;
+  border:0.066vw solid black;
+  border-radius:1.30vw;
+}
+
+#rl-slider::-moz-range-thumb {
+  width: 1.62vw;
+  height: 1.62vw;
+  background: #04AA6D;
+  cursor: pointer;
+}
+#tp-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1.62vw;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border:0.066vw solid black;
+  border-radius:1.30vw;
+}
+
+#tp-slider:hover {
+  opacity: 1;
+}
+
+#tp-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.62vw;
+  height: 1.62vw;
+  background: #04AA6D;
+  cursor: pointer;
+  border:0.066vw solid black;
+  border-radius:1.30vw;
+}
+
+#tp-slider::-moz-range-thumb {
+  width: 1.62vw;
+  height: 1.62vw;
+  background: #04AA6D;
+  cursor: pointer;
+}
+#dc-value{
+  border: 0.066vw solid black;
+  font-size: 2.28vw;
+  width: 5vw;
+  text-align: center;
+  border-radius: 3.25vw;
+  
+  position: relative;
+}
+#rl-value{
+  border: 0.066vw solid black;
+  font-size: 2.27vw;
+  width: 5vw;
+  text-align: center;
+  border-radius: 3.25vw;
+}
+#temp-value{
+  border: 0.066vw solid black;
+  font-size: 1.8vw;
+  width: 5vw;
+  height: 1.7vw;
+  text-align: center;
+  margin-left: 22.5vw;
+}
+#dc-disp{
+  margin-top: -7vw;
+  margin-left: 22vw;
+}
+#rl-disp{
+  margin-top: -22vw;
+  margin-left: -25vw;
+}
+#temp-disp{
+  margin-top:5vw !important;
+  margin-left: -15vw;
+}
+#temp-cont-disp{
+  border: 0.066vw solid black;
+  width: 14vw;
+  height: 1.8vw;
+  margin-left: 15vw;
+  border-radius: 10vw;
+}
+#source-control,#load-control,#temp-control{
+  border: 0.066vw solid black;
+  margin-top: 1vw;
+  margin-left: 2.6vw;
+  width: 40vw;
+  height: 1.7vw;
+  border-radius: 10vw;
+  background: whitesmoke;
+}
+#source-control h4{
+  margin-left: 3vw;
+  font-size: 1.2vw;
+}
+#load-control h4{
+  margin-left: 0.5vw;
+  font-size: 1.2vw;
+}
+#temp-control h4{
+  margin-left: 0.5vw !important;
+  font-size: 1.2vw !important;
+}
+#temp-cont-disp p{
+  margin-left: 1vw;
+  margin-top: -1.8vw;
+  font-size: 1.2vw;
+}
+#vm-value{
+  border: 0.66vw solid #8E8E8E;
+  font-size: 2.28vw;
+  width: 8vw;
+  border-style: groove;
+  text-align: center;
+  margin-left: 5vw;
+  margin-bottom: 10vw;
+  font-family:'digital-7';
+  color: red;
+  background-color: black;
+}
+#p-term{
+  border: 0.066vw solid black;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50vw;
+  position: relative;
+  margin-left: 11vw;
+  margin-top: -10vw;
+}
+#n-term{
+  border: 0.066vw solid black;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50vw;
+  position: relative;
+  margin-left: 6vw;
+  margin-top: -1vw;
+}
+#voltmeter-disp{
+  margin-left: -3.2vw;
+}
+#dc-voltmeter{
+  border: 0.3vw solid grey;
+  border-style: inset;
+  background: lightgrey;
+  width: 12vw;
+  position: relative;
+  height: 10vw;
+  margin-top: -42vw;
+  margin-left: 30vw;
+}
+#Voltmeter-title{
+  text-align: center;
+  font-size: 1.5vw;
+}
+/*---------------------------------Ammeter---------------------------------*/
+#dc-ammeter{
+  border: 0.3vw solid grey;
+  border-style: inset;
+  background: lightgrey;
+  width: 12vw;
+  position: relative;
+  height: 10vw;
+  margin-top: -42vw;
+  margin-left: 13vw;
+}
+#ammeter-title{
+  text-align: center;
+  font-size: 1.5vw;
+}
+#ammeter-disp{
+  margin-left: -3.2vw;
+}
+#am-value{
+  border: 0.66vw solid #8E8E8E;
+  font-size: 2.28vw;
+  width: 8vw;
+  border-style: groove;
+  text-align: center;
+  margin-left: 5vw;
+  margin-bottom: 10vw;
+  font-family:'digital-7';
+  color: red;
+  background-color: black;
+}
+#po-term{
+  border: 0.066vw solid black;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50vw;
+  position: relative;
+  margin-left: 11vw;
+  margin-top: -10vw;
+}
+#ne-term{
+  border: 0.066vw solid black;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50vw;
+  position: relative;
+  margin-left: 6vw;
+  margin-top: -1vw;
+}
+/*---------------------------------Tabulation---------------------------------*/
+#tabulation-div{
+  display: flex;
+  padding: 0.66vw;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  margin: 1.30vw 0;
+  border-width: 0.130vw;
+  border: 0.33vw solid;
+  border-color: lightgrey;
+  height: 30.8vw;
+  width: 45vw;
+  margin-left: 54vw;
+  margin-top: -64.2vw;
+}
+#table-header{
+  border:0.130vw solid;
+  border-color: lightgrey;
+  height: 3vw;
+  width: 100vw;
+  background: whitesmoke;
+}
+#obs-table{
+  border: 0.066vw solid black;
+  width: 43vw;
+  border-collapse: separate;
+  border-spacing: 0.130vw;
+}
+#obs-table th{
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+    text-align: center;
+    border: 0.066vw solid black;
+}
+#obs-table tr{
+    display: table-row;
+    vertical-align: middle;
+     
+}
+#obs-table td{
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+    text-align: center;
+    border: 0.066vw solid black;
+}
+#table-1{
+  background-color: whitesmoke;
+  height: 24.8vw;
+  width: 43vw;
+  overflow-y: auto;
+  margin-top: 1vw;
+  border: 0.066vw solid black;
+  
+}
+#tabulation-1-div{
+  display: flex;
+  padding: 0.66vw;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  margin: 1.30vw 0;
+  border-width: 0.130vw;
+  border: 0.33vw solid;
+  border-color: lightgrey;
+  height: 30.8vw;
+  width: 45vw;
+  margin-left: 54vw;
+  margin-top: 0vw;
+}
+#table-1-header{
+  border:0.130vw solid;
+  border-color: lightgrey;
+  height: 3vw;
+  width: 100vw;
+  background: whitesmoke;
+}
+#table-2{
+  background-color: whitesmoke;
+  height: 24.8vw;
+  width: 43vw;
+  overflow-y: auto;
+  margin-top: 1vw;
+  border: 0.066vw solid black;
+}
+#obs-1-table{
+  border: 0.066vw solid black;
+  width: 43vw;
+  border-collapse: separate;
+  border-spacing: 0.130vw;
+}
+#obs-1-table th{
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+    text-align: center;
+    border: 0.066vw solid black;
+}
+#obs-1-table tr{
+    display: table-row;
+    vertical-align: middle;
+     
+}
+#obs-1-table td{
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+    text-align: center;
+    border: 0.066vw solid black;
+}
+/*---------------------------------PLOTTING---------------------------------*/
+.highcharts-figure{
+  display: flex;
+  padding: 0.66vw;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  margin: 1.30vw 0;
+  border-width: 0.130vw;
+  border: 0.33vw solid;
+  border-color: lightgrey;
+  height: 48vw;
+  width: 48vw;
+  margin-left: 1vw;
+  /* margin-top: 35vw; */
+}
+#plotting-header{
+  border:0.130vw solid;
+  border-color: lightgrey;
+  height: 3vw;
+  width: 100vw;
+  background: whitesmoke;
+}
+#vi-plot{
+  border: 0.20vw solid;
+  border-color: lightgrey;
+  width: 100vw;
+  height: 42vw;
+  margin-top: 1vw;
+}
+.highcharts-figure-1{
+  display: flex;
+  padding: 0.66vw;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  margin: 1.30vw 0;
+  border-width: 0.130vw;
+  border: 0.33vw solid;
+  border-color: lightgrey;
+  height: 48vw;
+  width: 48vw;
+  margin-left: 51vw;
+  margin-top: -49.4vw;
+}
+#plotting-header-1{
+  border:0.130vw solid;
+  border-color: lightgrey;
+  height: 3vw;
+  width: 100vw;
+  background: whitesmoke;
+}
+#vi-plot-1{
+  border: 0.20vw solid;
+  border-color: lightgrey;
+  width: 100vw;
+  height: 42vw;
+  margin-top: 1vw;
+}
+#rev-btn{
+  margin-bottom: 1VW;
+  float: right;
+  margin-right: 2vw;
+  display: none;
+}
+@media(max-width:991px){
+  #plot{
+    margin-top: -0.66vw;
+    width: 69.01vw;
+  }
+}

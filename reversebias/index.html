@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
+    <script src="node_modules\jsplumb\dist\js\jsplumb.min.js"></script>
+    <script src="node_modules\jsplumb\dist\js\jsplumb.js"></script>
+    <link rel="stylesheet" href="node_modules\jsplumb\css\jsplumbtoolkit-defaults.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="node_modules\canvasjs\dist\canvasjs.min.js"></script>
+    <script class="include" type="text/javascript" src="node_modules\jquery\dist\jquery.min.js"></script>
+    <script class="include" type="text/javascript" src="node_modules\jqplot\jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="js\shCore.min.js"></script>
+    <script type="text/javascript" src="js\shBrushJScript.min.js"></script>
+    <script type="text/javascript" src="js\shBrushXml.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js" integrity="sha512-tQYZBKe34uzoeOjY9jr3MX7R/mo7n25vnqbnrkskGr4D6YOoPYSpyafUAzQVjV6xAozAqUFIEFsCO4z8mnVBXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script class="include" type="text/javascript" src="node_modules\jqplot\jqplot.meterGaugeRenderer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script src="js\script.js"></script>
+    <title>Expt 1</title>
+</head>
+<body>
+<!-------------Nav Bar------------->
+<header>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="src\logo.png" class="d-inline-block align-top" alt="image" id="nav-logo">
+          <a class="navbar-text" id="nav-text">V-I CHARACTERISTICS OF A DIODE</a>
+        </a>
+    </nav>
+</header>
+<!-------------SIMULATOR PANEL------------->
+<div id="toolbox">
+    <div id="sim-cont">
+        <div id="sim-header">
+            <h2 id="sim-head-text">REVERSE BIAS SIMULATOR</h2>
+            <div id="temp-cont-disp">
+                <a id="temp-disp"><input id="temp-value" type="text" min="26" max="100" step="1" value="26" oninput="txtchng()" readonly=""></a>
+                <p>TEMP IN °C</p>  
+            </div>
+        </div>    
+        
+        <img src="src\Rbias_ckt.png" class="d-block-w-100" alt="Image" id="fb-sim-ckt">
+    </div>
+    <div id="dc-ammeter">
+        <p id="ammeter-title">DC AMMETER</p>
+        <div id="ammeter-disp">
+            <a id="am-disp"><input id="am-value" value="0" type="text" readonly=""></a>
+            <div id="po-term"></div>
+            <div id="ne-term"></div>
+        </div>
+    </div>
+    <div id="dc-voltmeter">
+        <p id="Voltmeter-title">DC VOLTMETER</p>
+        <div id="voltmeter-disp">
+            <a id="vm-disp"><input id="vm-value" value="0" type="text" readonly=""></a>
+            <div id="p-term"></div>
+            <div id="n-term"></div>
+        </div>
+    </div>
+    <a id="dc-disp"><input id="dc-value" type="text" min="-5" max="5" step="0.05" value="" oninput="txtchng()" readonly=""></a>
+    <a id="rl-disp"><input id="rl-value" type="text" min="100" max="1000" step="1" value="" oninput="txtchng()" readonly=""></a>
+    <!-------------CONTROL PANEL------------->
+    <div id="sim-control">
+        <div id="sim-control-header">
+            <h2 id="sim-control-head-text">CONTROL PANEL</h2>
+            <div id="control-buttons">
+                <button id="switch-btn" type="button" class="btn btn-primary" onclick="chngtemp()">CHANGE TEMPERATURE</button>
+                <button id="simulate-btn" type="button" class="btn btn-primary" value="Add to Table" onclick="obstable()">SIMULATE</button>
+                <button id="switch-btn" type="button" class="btn btn-primary" onclick="plotting()">PLOT</button>
+                <button id="switch-btn" type="button" class="btn btn-primary">RESET SIMULATOR</button>
+            </div>
+            <div id="control-buttons-1">
+                <button id="switch-btn" type="button" class="btn btn-primary" onclick="chngtemp()">CHANGE TEMPERATURE</button>
+                <button id="simulate-btn" type="button" class="btn btn-primary" value="Add to Table" onclick="obstable1()">SIMULATE</button>
+                <button id="switch-btn" type="button" class="btn btn-primary" onclick="plotting1()">PLOT</button>
+                <button id="switch-btn" type="button" class="btn btn-primary">RESET SIMULATOR</button>
+            </div>
+            <div id="source-control">
+                <h4>DC SOURCE:</H4>
+                <div class="source-slider">
+                    <input type="range" min="0" max="30.5" value="0" step="0.1" class="slider_dc" id="dc-slider" oninput="dcsliderChange()">
+                </div>
+            </div>
+            <div id="load-control">
+                <h4>LOAD RESISTANCE:</H4>
+                <div class="load-slider">
+                    <input type="range" min="100" max="1000" value="100" step="1" class="slider_load" id="rl-slider" oninput="rlsliderChange()">
+                </div>
+            </div>
+            <div id="temp-control">
+                <h4>TEMPERATURE:</h4>
+                <div class="temp-slider">
+                    <input type="range" min="26" max="100" value="0" step="0.01" class="slider_temp" id="tp-slider" oninput="tpsliderChange()">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------TABULATION PANEL------------->
+<div id="tabulation-div">
+    <div id="table-header">
+        <h2 id="table-head-text">TABULATION 1</h2>
+    </div>
+    <div id="table-1">
+        <table id="obs-table">
+            <tbody>
+                <tr>
+                    <th>Sl No.</th>
+                    <th>Forward Voltage in Volt</th>
+                    <th>Forward Current in mAmp</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="tabulation-1-div">
+    <div id="table-1-header">
+        <h2 id="table-1-head-text">TABULATION 2</h2>
+    </div>
+    <div id="table-2">
+        <table id="obs-1-table">
+            <tbody>
+                <tr>
+                    <th>Sl No.</th>
+                    <th>Forward Voltage in Volt</th>
+                    <th>Forward Current in mAmp</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-------------TABULATION PANEL------------->
+<figure class="highcharts-figure">
+    <div id="plotting-header">
+        <h2 id="plotting-head-text">PLOT AREA FOR TABULATION 1</h2>
+    </div>
+    <div id="vi-plot">
+
+    </div>
+</figure>
+<figure class="highcharts-figure-1">
+    <div id="plotting-header-1">
+        <h2 id="plotting-head-text-1">PLOT AREA FOR TABULATION 2</h2>
+    </div>
+    <div id="vi-plot-1">
+
+    </div>
+</figure>
+<button id="rev-btn" type="button" class="btn btn-primary">NEXT</button>
+</body>
+</html>

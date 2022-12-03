@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "canvasjs": "^1.8.3",
+    "chart.js": "^4.0.1",
+    "chartjs": "^0.3.24",
+    "jqplot": "^1.0.9",
+    "jquery": "^3.6.1",
+    "jsplumb": "^2.15.6"
+  }
+}
