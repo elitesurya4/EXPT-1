@@ -168,7 +168,7 @@ function plotting() {
       type: "spline"
     },
     title: {
-      text: "V-I CHARACTERISTICS OF A DIODE IN A FORWARD BIAS CONDITION"
+      text: "V-I CHARACTERISTICS OF A DIODE IN FORWARD BIAS CONDITION"
     },
     yAxis: {
       title: {
@@ -203,7 +203,7 @@ function plotting1() {
       type: "spline"
     },
     title: {
-      text: "V-I CHARACTERISTICS OF A DIODE IN A FORWARD BIAS CONDITION AT INCREASED TEMPERATURE"
+      text: "V-I CHARACTERISTICS OF A DIODE IN FORWARD BIAS CONDITION AT INCREASED TEMPERATURE"
     },
     yAxis: {
       title: {

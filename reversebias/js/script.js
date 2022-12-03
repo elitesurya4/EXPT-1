@@ -17,7 +17,7 @@ var tempsliderval;
 function tpsliderChange() {
   tempsliderval = document.getElementById("tp-slider").value;
   document.getElementById("temp-value").value = tempsliderval;
-  fbias();
+  rbias();
 }
 var tc;
 function txtchng() {
@@ -151,11 +151,11 @@ function plotting() {
       type: "spline"
     },
     title: {
-      text: "V-I CHARACTERISTICS OF A DIODE IN A FORWARD BIAS CONDITION"
+      text: "V-I CHARACTERISTICS OF A DIODE IN REVERSE BIAS CONDITION"
     },
     yAxis: {
       title: {
-        text: "Forward Current in mAmp"
+        text: "Reverse Current in μAmp"
       }
     },
     legend: {
@@ -163,7 +163,7 @@ function plotting() {
     },
     xAxis: {
       title: {
-        text: "Forward Voltage in Volts"
+        text: "Reverse Voltage in Volts"
       }
     },
     tooltip: {
@@ -186,11 +186,11 @@ function plotting1() {
       type: "spline"
     },
     title: {
-      text: "V-I CHARACTERISTICS OF A DIODE IN A REVERSE BIAS CONDITION AT INCREASED TEMPERATURE"
+      text: "V-I CHARACTERISTICS OF A DIODE IN REVERSE BIAS CONDITION AT INCREASED TEMPERATURE"
     },
     yAxis: {
       title: {
-        text: "Reverse Current in mAmp"
+        text: "Reverse Current in μAmp"
       }
     },
     legend: {
