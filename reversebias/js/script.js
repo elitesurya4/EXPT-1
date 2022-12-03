@@ -186,11 +186,11 @@ function plotting1() {
       type: "spline"
     },
     title: {
-      text: "V-I CHARACTERISTICS OF A DIODE IN A FORWARD BIAS CONDITION AT INCREASED TEMPERATURE"
+      text: "V-I CHARACTERISTICS OF A DIODE IN A REVERSE BIAS CONDITION AT INCREASED TEMPERATURE"
     },
     yAxis: {
       title: {
-        text: "Forward Current in mAmp"
+        text: "Reverse Current in mAmp"
       }
     },
     legend: {
@@ -199,7 +199,7 @@ function plotting1() {
     xAxis: {
       
       title: {
-        text: "Forward Voltage in Volts"
+        text: "Reverse Voltage in Volts"
       }
     },
     tooltip: {
