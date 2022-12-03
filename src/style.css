@@ -560,9 +560,3 @@ html, body{
   margin-right: 2vw;
   display: none;
 }
-@media(max-width:991px){
-  #plot{
-    margin-top: -0.66vw;
-    width: 69.01vw;
-  }
-}
