@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @font-face {
   font-family: 'digital-7';
   font-style: normal;
@@ -42,10 +45,11 @@ html, body{
   margin: 1.30vw 0;
   border-width: 0.130vw;
   border: 0.33vw solid;
-  border-color: lightgrey;
+  border-color: black;
   height: 70vw;
   width: 50vw;
   margin-left: 1vw;
+  background-image: linear-gradient(to bottom, #f4f3f5, #f3f3f4, #f2f2f3, #f2f2f2, #f1f1f1, #ebeaef, #e5e4ec, #deddea, #d0cfe6, #c1c2e1, #b1b5dd, #a1a8d9);
 }
 #nav-logo{
   margin-left: 2.60vw;
@@ -53,18 +57,25 @@ html, body{
   height: 4.55vw;
 }
 #nav-text{
-  font-size: 1.95vw;
+  font-size: 3vw;
   text-decoration: none;
-  float: left;
+  margin-right: 25vw;
+  font-family: 'Fugaz One', cursive;
+  color: black;
+  text-shadow: 0vw 0.2vw 0.1vw red;
+}
+#nav_background{
+  background-image: linear-gradient(to top, #a375ff, #af8eff, #bca6fe, #cbbcfb, #dad3f7, #e1dbf6, #e8e4f4, #eeecf3, #eee9f5, #eee6f6, #efe3f7, #f0e0f8);
 }
 #plot{
   margin-top: 3.90vw;
 }
 #sim-cont{
   border: 0.20vw solid;
-  border-color: lightgrey;
+  border-color: black;
   width: 45vw;
   margin-left: 1.7vw;
+  background-image: linear-gradient(to bottom, #f4f3f5, #f3f3f4, #f2f2f3, #f2f2f2, #f1f1f1, #ebeaef, #e5e4ec, #deddea, #d0cfe6, #c1c2e1, #b1b5dd, #a1a8d9);
 }
 #fb-sim-ckt{
   height: 29.29vw;
@@ -75,26 +86,33 @@ html, body{
 }
 #sim-control-header,#plot-header{
   border:0.130vw solid;
-  border-color: lightgrey;
+  border-color: black;
   height: 3.25vw;
   background: whitesmoke;
+  background-image: linear-gradient(to right bottom, #6bd1cb, #74ced6, #84cadc, #95c6dd, #a5c2d9, #aec6da, #b6cbdb, #bfcfdc, #c9dbe4, #d5e7ed, #e3f3f5, #f1fffe)
 }
 #sim-header{
   border:0.130vw solid;
-  border-color: lightgrey;
+  border-color: black;
   height: 5.58vw;
   background: whitesmoke;
+  background-image: linear-gradient(to right bottom, #6bd1cb, #74ced6, #84cadc, #95c6dd, #a5c2d9, #aec6da, #b6cbdb, #bfcfdc, #c9dbe4, #d5e7ed, #e3f3f5, #f1fffe);
 }
 #sim-head-text,#sim-control-head-text,#plot-head-text,#table-head-text,#table-1-head-text,#plotting-head-text,#plotting-head-text-1{
   text-align: center;
+  color: #000;
+  font-family: 'Kaushan Script', cursive;
+  text-shadow: 0vw 0.1vw 0.1vw red;
 }
 #sim-control{
   border: 0.20vw solid;
-  border-color: lightgrey;
+  border-color: black;
   width: 45vw;
   height: 18.60vw;
   margin-top: 1.30vw;
   margin-left: 1.7vw;
+  background-image: linear-gradient(to bottom, #f4f3f5, #f3f3f4, #f2f2f3, #f2f2f2, #f1f1f1, #ebeaef, #e5e4ec, #deddea, #d0cfe6, #c1c2e1, #b1b5dd, #a1a8d9);
+  
 
 }
 #switch-btn,#simulate-btn{
@@ -142,7 +160,7 @@ html, body{
   appearance: none;
   width: 1.62vw;
   height: 1.62vw;
-  background: #04AA6D;
+  background: #04AA6D ;
   cursor: pointer;
   border:0.066vw solid black;
   border-radius:20px;
@@ -396,24 +414,27 @@ html, body{
   margin: 1.30vw 0;
   border-width: 0.130vw;
   border: 0.33vw solid;
-  border-color: lightgrey;
+  border-color: black;
   height: 30.8vw;
   width: 45vw;
   margin-left: 54vw;
   margin-top: -64.2vw;
+  background-image: linear-gradient(to bottom, #f4f3f5, #f3f3f4, #f2f2f3, #f2f2f2, #f1f1f1, #ebeaef, #e5e4ec, #deddea, #d0cfe6, #c1c2e1, #b1b5dd, #a1a8d9);
 }
 #table-header{
   border:0.130vw solid;
-  border-color: lightgrey;
+  border-color: black;
   height: 3vw;
   width: 100vw;
   background: whitesmoke;
+  background-image: linear-gradient(to right bottom, #6bd1cb, #74ced6, #84cadc, #95c6dd, #a5c2d9, #aec6da, #b6cbdb, #bfcfdc, #c9dbe4, #d5e7ed, #e3f3f5, #f1fffe);
 }
 #obs-table{
   border: 0.066vw solid black;
   width: 43vw;
   border-collapse: separate;
   border-spacing: 0.130vw;
+  
 }
 #obs-table th{
     display: table-cell;
@@ -441,6 +462,8 @@ html, body{
   overflow-y: auto;
   margin-top: 1vw;
   border: 0.066vw solid black;
+  background-image: linear-gradient(to bottom, #f4f3f5, #f3f3f4, #f2f2f3, #f2f2f2, #f1f1f1, #ebeaef, #e5e4ec, #deddea, #d0cfe6, #c1c2e1, #b1b5dd, #a1a8d9);
+  
   
 }
 #tabulation-1-div{
@@ -451,18 +474,20 @@ html, body{
   margin: 1.30vw 0;
   border-width: 0.130vw;
   border: 0.33vw solid;
-  border-color: lightgrey;
+  border-color: black;
   height: 30.8vw;
   width: 45vw;
   margin-left: 54vw;
   margin-top: 0vw;
+  background-image: linear-gradient(to bottom, #f4f3f5, #f3f3f4, #f2f2f3, #f2f2f2, #f1f1f1, #ebeaef, #e5e4ec, #deddea, #d0cfe6, #c1c2e1, #b1b5dd, #a1a8d9);
 }
 #table-1-header{
   border:0.130vw solid;
-  border-color: lightgrey;
+  border-color: black;
   height: 3vw;
   width: 100vw;
   background: whitesmoke;
+  background-image: linear-gradient(to right bottom, #6bd1cb, #74ced6, #84cadc, #95c6dd, #a5c2d9, #aec6da, #b6cbdb, #bfcfdc, #c9dbe4, #d5e7ed, #e3f3f5, #f1fffe);
 }
 #table-2{
   background-color: whitesmoke;
@@ -471,6 +496,7 @@ html, body{
   overflow-y: auto;
   margin-top: 1vw;
   border: 0.066vw solid black;
+  background-image: linear-gradient(to bottom, #f4f3f5, #f3f3f4, #f2f2f3, #f2f2f2, #f1f1f1, #ebeaef, #e5e4ec, #deddea, #d0cfe6, #c1c2e1, #b1b5dd, #a1a8d9);
 }
 #obs-1-table{
   border: 0.066vw solid black;
@@ -506,22 +532,24 @@ html, body{
   margin: 1.30vw 0;
   border-width: 0.130vw;
   border: 0.33vw solid;
-  border-color: lightgrey;
+  border-color: black;
   height: 48vw;
-  width: 48vw;
+  width: 50vw;
   margin-left: 1vw;
+  background-image: linear-gradient(to bottom, #f4f3f5, #f3f3f4, #f2f2f3, #f2f2f2, #f1f1f1, #ebeaef, #e5e4ec, #deddea, #d0cfe6, #c1c2e1, #b1b5dd, #a1a8d9);
   /* margin-top: 35vw; */
 }
 #plotting-header{
   border:0.130vw solid;
-  border-color: lightgrey;
+  border-color: black;
   height: 3vw;
   width: 100vw;
   background: whitesmoke;
+  background-image: linear-gradient(to right bottom, #6bd1cb, #74ced6, #84cadc, #95c6dd, #a5c2d9, #aec6da, #b6cbdb, #bfcfdc, #c9dbe4, #d5e7ed, #e3f3f5, #f1fffe);
 }
 #vi-plot{
   border: 0.20vw solid;
-  border-color: lightgrey;
+  border-color: black;
   width: 100vw;
   height: 42vw;
   margin-top: 1vw;
@@ -534,22 +562,24 @@ html, body{
   margin: 1.30vw 0;
   border-width: 0.130vw;
   border: 0.33vw solid;
-  border-color: lightgrey;
+  border-color: black;
   height: 48vw;
-  width: 48vw;
-  margin-left: 51vw;
+  width: 45vw;
+  margin-left: 54vw;
   margin-top: -49.4vw;
+  background-image: linear-gradient(to bottom, #f4f3f5, #f3f3f4, #f2f2f3, #f2f2f2, #f1f1f1, #ebeaef, #e5e4ec, #deddea, #d0cfe6, #c1c2e1, #b1b5dd, #a1a8d9);
 }
 #plotting-header-1{
   border:0.130vw solid;
-  border-color: lightgrey;
+  border-color: black;
   height: 3vw;
   width: 100vw;
   background: whitesmoke;
+  background-image: linear-gradient(to right bottom, #6bd1cb, #74ced6, #84cadc, #95c6dd, #a5c2d9, #aec6da, #b6cbdb, #bfcfdc, #c9dbe4, #d5e7ed, #e3f3f5, #f1fffe);
 }
 #vi-plot-1{
   border: 0.20vw solid;
-  border-color: lightgrey;
+  border-color: black;
   width: 100vw;
   height: 42vw;
   margin-top: 1vw;
@@ -558,5 +588,81 @@ html, body{
   margin-bottom: 1VW;
   float: right;
   margin-right: 2vw;
+  display: none;
+}
+@media(max-width:991px){
+  #plot{
+    margin-top: -0.66vw;
+    width: 69.01vw;
+  }
+}
+.instruction{
+  max-width:50vw ;
+  padding: 0vw 1.30vw;
+  margin-left:53vw;
+  margin-top: 1vw;
+}
+.instruction .primary-tab{
+  margin-bottom: 0.53vw;
+  border-bottom-left-radius: 1.3vw ;
+  border-bottom-right-radius: 1.3vw;
+  border-top-left-radius: 1.95vw;
+  border-top-right-radius: 1.95vw ;
+  background:skyblue(0, 174, 255, 0.375); 
+}
+.instruction .primary-tab label{
+  background: #43d1db; 
+  padding: 0.65vw 1.3vw;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position:relative;
+  z-index: 99;
+  border-radius: 1.3vw;
+}
+.instruction label span{
+  color: black;
+  font-size: 1.7vw;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 500;
+  text-shadow: 0vw 0.1vw 0.1vw red;
+}
+.instruction label .accordion-icon{
+  position: relative;
+  height: 1.95vw;
+  width: 1.95vw;
+  color: black;
+  display: inline;
+  font-size: 3vw !important;
+}
+.instruction .primary-tab input:checked ~ label .accordion-icon i:before{
+  content: '\f107';
+}
+.instruction label .accordion-icon i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.instruction .primary-tab .content{
+  max-height: 0vw;
+  overflow: hidden;
+  position: absolute;
+  background: whitesmoke;
+  border-radius: 3vw;
+}
+.primary-tab input:checked ~ .content{
+  max-height: 100vh;
+  overflow: hidden;
+  transition: all 10s ease;
+}
+.instruction .primary-tab .content p{
+  font-size: 1.04vw;
+  padding: 0.98vw 1.3vw;
+  text-align: justify;
+  color: #000;
+}
+.instruction input{
   display: none;
 }
